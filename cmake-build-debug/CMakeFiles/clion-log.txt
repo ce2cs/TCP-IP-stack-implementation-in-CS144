@@ -1,9 +1,0 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -G "CodeBlocks - Unix Makefiles" /home/boyang/Codes/CS144/sponge
---   NOTE: You can choose a build type by calling cmake with one of:
---     -DCMAKE_BUILD_TYPE=Release   -- full optimizations
---     -DCMAKE_BUILD_TYPE=Debug     -- better debugging experience in gdb
---     -DCMAKE_BUILD_TYPE=RelASan   -- full optimizations plus address and undefined-behavior sanitizers
---     -DCMAKE_BUILD_TYPE=DebugASan -- debug plus sanitizers
--- Configuring done
--- Generating done
--- Build files have been written to: /home/boyang/Codes/CS144/sponge/cmake-build-debug
