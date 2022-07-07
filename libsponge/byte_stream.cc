@@ -16,7 +16,7 @@ void DUMMY_CODE(Targs &&... /* unused */) {}
 using namespace std;
 
 ByteStream::ByteStream(const size_t capacity) :
-    buffer({}),
+    buffer(),
     capa(capacity),
     ended(false),
     written_count(0),
@@ -53,8 +53,8 @@ void ByteStream::pop_output(const size_t len) {
 //! \param[in] len bytes will be popped and returned //! \returns a string
 std::string ByteStream::read(const size_t len) {
     stringstream ss;
-    for (size_t i = 0; i < len && buffer.empty(); i++) {
-        ss << *buffer.begin();
+    for (size_t i = 0; i < len && !buffer.empty(); i++) {
+        ss << buffer.front();
         buffer.pop_front();
         read_count ++;
     }
